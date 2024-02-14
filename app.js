@@ -5,9 +5,11 @@ const port =process.env.PORT ||7000
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.get('/',(res,resp)=>{
+   resp.status(200)
 resp.send("hello")
 })
 app.get("/bdy",(res,resp)=>{
+   resp.status(200)
    const name= res.query.name
    let alt=`http://localhost:7000/?name=${name}`
    

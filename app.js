@@ -8,6 +8,7 @@ app.get('/',(res,resp)=>{
 resp.send("hello")
 })
 app.get("/bdy",(res,resp)=>{
+    resp.status(200)
    const name= res.query.name
    let alt=`http://localhost:7000/?name=${name}`
    
